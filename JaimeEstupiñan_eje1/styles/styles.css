@@ -22,6 +22,7 @@ p{
 a{
     color: var(--color-mainColor);
     text-decoration: none;
+    overflow-wrap: break-word;
 }
 
 /*Añadiendo que salga una linea al pasar el mouse sobre una etquieta de tipo a (Un link)*/
@@ -99,7 +100,7 @@ a:visited{
     display: inline-block;
     position: relative;
     text-align: center;
-    width: 14.1%;
+    width: 16.4%;
 }
 
 /*Se asigna un color pre definido en una variable al hover del menu de navegacion */
@@ -122,7 +123,7 @@ a:visited{
 
     /*Otro estilo */ 
     display: inline-block;
-    padding: 15px;
+    padding: 5%;
     position: relative;
     text-decoration-line: none;
 }
