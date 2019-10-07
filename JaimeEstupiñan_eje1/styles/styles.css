@@ -1,11 +1,48 @@
+/*Variables*/
+:root{
+    --color-background: #0E0D1F;
+    --color-mainColor: #4390DE;
+}
+
+/* Asignando un valor por defecto para la fuente de la etiqueta h1 */
+h1{
+    font-family: "Times New Roman", Times, serif;
+    font-style: normal;
+    text-align: justify;
+}
+
+/* Asignando un valor por defecto para la fuente de la etiqueta p */
+p{
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	font-style: normal;
+    text-align: justify;
+}
+
+/*Eliminando el text-decoration que traen por defecto las etiquetas de tipoa a*/
+a{
+    color: var(--color-mainColor);
+    text-decoration: none;
+}
+
+/*Añadiendo que salga una linea al pasar el mouse sobre una etquieta de tipo a (Un link)*/
+a:hover{
+    text-decoration: underline solid var(--color-mainColor);
+}
+
+/*Cuando un link es visitado se cambia el color de la etiqueta el color de su text-decoration*/
+a:visited{
+    color: red;
+    text-decoration: red;
+}
 
 /* Colores del background de la pagina */
 .backgroundColor{
     background-color: #0E0D1F;
 }
 
+/*Colores de para los diferentes fondos*/
 .mainColor{
-    background-color: #60A6FF
+    background-color: #4390DE
 }
 
 .otherColor{
@@ -22,52 +59,68 @@
 
 
 /* Textos de la pagina */
-
 .ref{
     text-decoration: none;
 }
 
+.ref:hover{
+    text-decoration: none;
+}
 
+.ref:visited{
+    text-decoration: underline solid green;
+}
+
+/*Eliminar margenes y padding*/
 .body{
     margin: 0px;
     padding: 0px;
 }
 
-.text{
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
-	font-style: normal;
-	text-align: justify;
-}
-
+/* Estilos de la barra de navegacion */
 .menuNav{
     width: 100%;
-    margin: 5% auto 0 auto;
+    margin: 0;
     margin-top: 0%;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    z-index: 2;
     position: relative;
 }
 
+/*Es tilos de los elementos de la barra de navegacion, se eliminan los tipos, margenes y padding */
 .menuNav ul{
-    font-size: 0;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
+/*Se genera una proporcion adecuada para las pantallas grandes y se alinea */
 .menuNav ul li{
-    font-size: 2rem;
 	font-style: normal;
 	font-weight: normal;
-    text-align: center;
     display: inline-block;
     position: relative;
+    text-align: center;
+    width: 14.1%;
+}
+
+/*Se asigna un color pre definido en una variable al hover del menu de navegacion */
+.menuNav ul li:hover{
+    background-color: var(--color-mainColor);
 }
 
 .menuNav ul li a{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* Estilo de la letra */
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
     font-size: 2rem;
     font-weight: 400;
-    /*color: #333;*/
     color: white;
+
+    /*Otro estilo */ 
     display: inline-block;
     padding: 15px;
     position: relative;
@@ -77,8 +130,7 @@
 .content{
     position: relative;
 	text-align: justify;
-    margin: 0% 2% 0% 2%;
-    max-width:44%;
+    margin: 2%;
     padding: 2%;
     font-size: 1.5rem;
     flex: 1;
@@ -91,21 +143,27 @@
 #mainBlock{
     position: relative;
 	text-align: justify;
-    float: center;
-    margin: 4% 0 0 4%;
-    max-width: 88%;
-    padding: 2%;
-    font-size: 1.5rem;
+    max-width: 92%;
 }
 
-#dosCosos{
-    margin: 0% 2% 0% 2%;
-    padding: 4% 0% 0% 0%;
+.containerContets{
+    margin: 0%;
+    padding: 0%;
     max-width: 100%;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
+}
+
+.contentImg {
+    position: relative;
+	text-align: justify;
+    margin: 2%;
+    flex: 1;
+}
+.contentImg img{
+    width: 100%;
 }
 
 #topPage{
@@ -116,17 +174,47 @@
 }
 
 #indexMain{
-    position: relative;
-	text-align: justify;
-    float: center;
     margin: 4% auto 4% auto;
     max-width: 90%;
-    padding: 0% 0% 5% 0%;
-    font-size: 1.5rem;
+    padding: 2%;
 }
 
 #title{
     color: white;
     margin: 0%;
     position: relative;
+    /* Estilos de la fuente */
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-weight: 700;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    color: #eeeeee;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+}
+
+@media only screen and (max-width:1220px){
+    .menuNav ul li{
+        width: auto;
+    }
+}
+
+@media only screen and (max-width:780px){
+}
+
+@media only screen and (max-width:480px){
+    .contentImg {
+        min-width: 96%;
+    }
 }
