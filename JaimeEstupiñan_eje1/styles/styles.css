@@ -36,6 +36,13 @@ a:visited{
     text-decoration: red;
 }
 
+/*Definiendo estilo por defecto para las etiquetas de tipoa header*/
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
 /* Colores del background de la pagina */
 .backgroundColor{
     background-color: #0E0D1F;
@@ -93,7 +100,7 @@ a:visited{
     padding: 0;
 }
 
-/*Se genera una proporcion adecuada para las pantallas grandes y se alinea */
+/*Se genera una proporcion adecuada para las pantallas grandes y se alinea*/
 .menuNav ul li{
 	font-style: normal;
 	font-weight: normal;
@@ -103,11 +110,12 @@ a:visited{
     width: 16.4%;
 }
 
-/*Se asigna un color pre definido en una variable al hover del menu de navegacion */
+/*Se asigna un color pre definido en una variable al hover del menu de navegacion*/
 .menuNav ul li:hover{
     background-color: var(--color-mainColor);
 }
 
+/*Estilos para las etquietas de tipo a que se encuentran de entro de un ul un li*/
 .menuNav ul li a{
     /* Estilo de la letra */
     font-family: "Times New Roman", Times, serif;
@@ -128,6 +136,7 @@ a:visited{
     text-decoration-line: none;
 }
 
+/*Se define como se va a ver el contenido en general de la pagina, los parrafos y textos largos*/
 .content{
     position: relative;
 	text-align: justify;
@@ -136,17 +145,19 @@ a:visited{
     font-size: 1.5rem;
     flex: 1;
 }
-
+/*Especifica que las imagenes se vean tan anchas como puedan*/
 .content img {
     width: 100%;
 }
 
+/*Bloque especial usado en el index*/
 #mainBlock{
     position: relative;
 	text-align: justify;
     max-width: 92%;
 }
 
+/*Clase creada para el caso en que se deseen tener varios objetos con la clase content*/
 .containerContets{
     margin: 0%;
     padding: 0%;
@@ -157,16 +168,20 @@ a:visited{
     justify-content: center;
 }
 
+/*Clase creada para el caso en que se deseen tener varios objetos de tipo img dentro de la clase content*/
 .contentImg {
     position: relative;
 	text-align: justify;
     margin: 2%;
     flex: 1;
 }
+
+/*Especifica que las imagenes se vean tan anchas como puedan*/
 .contentImg img{
     width: 100%;
 }
 
+/*Estilo especifico para la etiqueta que esta en la parte superior de la pagina */
 #topPage{
     height: 100%;
     width: 100%;
@@ -174,12 +189,15 @@ a:visited{
     text-align: center;
 }
 
+/*Estilo especifico para centrar los bloques de las imagenes*/
 #indexMain{
     margin: 4% auto 4% auto;
     max-width: 90%;
     padding: 2%;
 }
 
+
+/*Se definie el tipo de letra que contiene el elemento en la parte superior de la pantalla*/
 #title{
     color: white;
     margin: 0%;
@@ -197,25 +215,37 @@ a:visited{
     text-align: center;
 }
 
-.header {
-    display: flex;
-    color: #eeeeee;
-    align-items: center;
-    width: 100%;
-    height: 65px;
-}
 
+/*Estilo definido para pantallas menores a 1220px*/
 @media only screen and (max-width:1220px){
     .menuNav ul li{
         width: auto;
+        padding: 20px;
+    }
+
+}
+
+/*Estilos especificos para pantallas con una tamaño menor a 780px a lo ancho*/
+@media only screen and (max-width:779px){
+    /*Se ajusta la barra de navegacion para que funcione correctamente*/
+    .menuNav ul li{
+        width: 49%;
+        padding: 0;
+    }
+    /*Se ajusta el contenido de las imagenes para que se vean correctamente*/
+    .contentImg{
+        min-width: 44%;
     }
 }
 
-@media only screen and (max-width:780px){
-}
-
-@media only screen and (max-width:480px){
+/*Estilos especificos para pantallas con una tamaño menor a 480px a lo ancho*/
+@media only screen and (max-width:479px){
+    /*Se ajusta la barra de navegacion para que funcione correctamente*/
+    .menuNav ul li{
+        width: 100%;
+    }
+    /*Se ajusta el contenido de las imagenes para que se vean correctamente*/
     .contentImg {
-        min-width: 96%;
+        min-width: 100%;
     }
 }
