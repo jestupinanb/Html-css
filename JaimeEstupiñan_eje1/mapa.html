@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="otherColor">
+
+<head>
+    <title>Australia</title>
+    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_blank">
+    <!--Llamado a los archivos .js-->
+    <!--Llamado al archivo de phaser: phaser.js-->
+    <script src="javascript/phaser.js"></script>
+    <!--Llamado al archivo del mapa: mapa.js-->
+    <script src="/javascript/mapa.js"></script>
+</head>
+
+<!-- Contenido de la pagina -->
+
+<body class="body">
+    <!--Header de la pagina web-->
+    <header class="body">
+        <!--Cabecera de la pagina web-->
+        <div class=" backgroundColor" id="topPage">
+            <a href="index.html" target="_self" class="ref">
+                <h1 class="title" id="title">
+                    AUSTRALIA
+                </h1>
+            </a>
+        </div>
+        <!--Barra de navegacion-->
+        <div class="menuNav backgroundColor">
+            <ul>
+                <li><a href="index.html" target="_self">Inicio</a></li>
+                <li><a href="ubicacion.html" target="_self">Ubicacion</a></li>
+                <li><a href="personajes.html" target="_self">Personajes</a></li>
+                <li><a href="actividades.html" target="_self">Actividades</a></li>
+                <li><a href="historia.html" target="_self">Historia</a></li>
+                <li><a href="creditos.html" target="_self">Creditos</a></li>
+                <li><a href="mapa.html" target="_self">Mapa</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!--Seccion sobre la que se encuentra todo en esta pagina, se uso la clase backgroundColor la cual contiene un creado  en css para fondos y zonas especiales-->
+    <div class="backgroundColor" id="indexMain">
+
+        <!--div que utiliza la clase content que usa el color diseñado para el fondo del contendo de documentos y parrafos -->
+        <!--Solo contiene un titulo ya que  representa a un conjunto de elementos-->
+        <div class="content lastColorWhite" id="mainBlock">
+            <h1>Mapa Interactivo</h1>
+            <p>
+                Este es un mapa interactivo... ¡Descubrelo!
+            </p>
+            <p>
+                Si tienes alguna duda puedes ir al boton de informacion que se encuentra sobre el mapa.
+            </p>
+        </div>
+        <!--div que tuliza la clase containerContets el cual se utilza para que los elementos con la clase content se ajusten automaticamente al tamaño de la pantalla-->
+        <div class="containerContets">
+            <!--div que utiliza la clase content que usa el color diseñado para el fondo del contendo de documentos y parrafos -->
+            <div class="content lastColorWhite">
+                <div id="map" class="interactiveMap"></div>
+                <!--Informacion mostrada al seleccionar la pieza 1 del mapa-->
+                <div class="content lastColorWhite informationMap" id="informationMap_1">
+                    <h1>Queensland</h1>
+                    <p>
+                        Queensland (Abreviado como Qld) es uno de los
+                        seis estados que, junto con los dos territorios continentales y los seis insulares, conforman la
+                        Mancomunidad de Australia.
+                        Está situado al noreste del país, limitando al norte y al oeste con el golfo de Carpentaria, al
+                        este con el mar del Coral (océano Pacífico), al sur con Nueva Gales del Sur, al suroeste con
+                        Australia Meridional y al oeste con el Territorio del Norte.
+                    </p>
+                    <!--Se uso un content para almacenar las imagenes debido a que este permite que se ajusten automaticamente-->
+                    <div class="containerContets">
+                        <!--Se uso un content especial para imagenes-->
+                        <div class="contentImg">
+                            <img src="images/mapa/queensland_img_1.jpg" alt="queensland_img_1" />
+                        </div>
+                        <!--Se uso un content especial para imagenes-->
+                        <div class="contentImg">
+                            <img src="images/mapa/queensland_img_2.png" alt="queensland_img_2" />
+                        </div>
+                        <!--Se uso un content especial para imagenes-->
+                        <div class="contentImg">
+                            <img src="images/mapa/queensland_img_3.png" alt="queensland_img_3" />
+                        </div>
+                    </div>
+                    <p>
+                        Queensland tiene 10 de las 30 ciudades más grandes de Australia —Gold Coast, Sunshine Coast,
+                        Townsville, Cairns, Toowoomba, Mackay, Rockhampton, Bundaberg y Hervey Bay— y es la tercera
+                        economía mayor del país.
+                    </p>
+                    <p>
+                        Con un área de 1,727,000 kilómetros cuadrados, Queensland es el segundo estado más grande de
+                        Australia. El más grande es el oeste de Australia. Queensland es casi cinco veces más grande que
+                        Japón, siete veces más grande que Gran Bretaña y dos veces y media más grande que Texas.
+                    </p>
+                    <button class="buttonMap" onclick="onClickReturnMap('informationMap_1')">Volver</button>
+                </div>
+                <!--Informacion mostrada al seleccionar la pieza 2 del mapa-->
+                <div class="content lastColorWhite informationMap" id="informationMap_2">
+                    <h1>Nueva Gales del Sur</h1>
+                    <p>
+                        Nueva Gales del Sur (en inglés, New South Wales, abreviado como NSW) es uno de los seis estados
+                        que, junto con los dos territorios continentales y los seis
+                        insulares, conforman la Mancomunidad de Australia. Su capital y ciudad más poblada es Sídney.
+                        Está ubicado al sureste del país, limitando al norte con Queensland, al este con el mar de
+                        Tasmania (océano Pacífico), al sur con el río Murray que lo separa de Victoria, y al oeste con
+                        Australia Meridional, además de rodear al Territorio de la Capital Australiana. Con 7 272 800
+                        habs. en 2012 es el estado o territorio más poblado.
+                    </p>
+                    <!--Se uso un content para almacenar las imagenes debido a que este permite que se ajusten automaticamente-->
+                    <div class="containerContets">
+                        <!--Se uso un content especial para imagenes-->
+                        <div class="contentImg">
+                            <img src="images/mapa/nueva_gales_del_sur_1.jpg" alt="nueva_gales_del_sur_1" />
+                        </div>
+                        <!--Se uso un content especial para imagenes-->
+                        <div class="contentImg">
+                            <img src="images/mapa/nueva_gales_del_sur_2.jpg" alt="nueva_gales_del_sur_2" />
+                        </div>
+                    </div>
+                    <p>
+                        Fue fundado en 1788 y originalmente incluyó buena parte de la tierra de Australia, Nueva Zelanda
+                        y otras islas de la región. Sin embargo, durante el siglo XIX, se separaron varios territorios
+                        de este estado, formando las colonias británicas de Tasmania, Australia Meridional, Victoria,
+                        Queensland y Nueva Zelanda.
+                    </p>
+                    <p>
+                        Nueva Gales del Sur es conocida por Port Jackson, que es el puerto más importante de la capital,
+                        y Sídney, donde viven aproximadamente dos tercios de la población total del estado. También es
+                        conocida por varios pueblos pequeños del campo como Tamworth, el «hogar de la música country» de
+                        Australia.
+                    </p>
+                    <button class="buttonMap" onclick="onClickReturnMap('informationMap_2')">Volver</button>
+                </div>
+                <!--Informacion mostrada al seleccionar la pieza 3 del mapa-->
+                <div class="content lastColorWhite informationMap" id="informationMap_3">
+                    <h1>Australia Meridional </h1>
+                    <p>
+                        Australia Meridional o Australia del Sur (en inglés: South Australia) es uno de los seis estados
+                        que, junto con los dos territorios continentales y los seis insulares, conforman la Mancomunidad
+                        de Australia.Su capital y ciudad más poblada es Adelaida, conocida como La ciudad de las
+                        iglesias.Está ubicado al sur del país, limitando al norte con el Territorio del Norte, al
+                        noreste con Queensland, al este con Nueva Gales del Sur, al sureste con Victoria, al sur con la
+                        Gran Bahía Australiana y los golfos Spencer y Saint Vicent (océano Índico), y al oeste con
+                        Australia Occidental. Con una superficie terrestre de 983 482 km², es el cuarto estado o
+                        territorio más extenso, por detrás de Australia Occidental, Queensland y el Territorio del
+                        Norte.
+                    </p>
+                    <!--Se uso un content para almacenar las imagenes debido a que este permite que se ajusten automaticamente-->
+                    <div class="containerContets">
+                        <!--Se uso un content especial para imagenes-->
+                        <img src="images/mapa/australia_meridional.jpg" alt="nueva_gales_del_sur_1" />
+                    </div>
+                    <p>
+                        La población tiende a concentrarse en las áreas fértiles a lo largo de la costa sureste y en la
+                        ribera del río Murray. Un alto porcentaje de los habitantes del estado vive en la ciudad de
+                        Adelaida (un 77,5 % en junio de 2018 según los datos proporcionados por Australian Bureau of
+                        Statistics).
+                        El origen de Australia Meridional es singular en la historia del país ya que fue una provincia
+                        británica de libre colonización. La colonización oficial comenzó el 28 de diciembre de 1836
+                        cuando se declaró el estado en el The Old Gum Tree por el gobernador Hindmarsh. La manera de
+                        colonizar esta parte de Australia se hizo siguiendo una teoría de Edward Gibbon Wakefield que
+                        más tarde fue utilizada para colonizar Nueva Zelanda. El objetivo era establecer la provincia
+                        como un centro de civilización para inmigrantes libres, tendría libertades civiles y tolerancia
+                        religiosa. Aunque su historia se ha visto marcada por dificultades económicas, Australia
+                        Meridional ha permanecido siendo un estado con innovación política y con una vida cultural
+                        vibrante. Hoy en día, el estado es conocido como el estado festivo y del buen vino.
+                    </p>
+                    <button class="buttonMap" onclick="onClickReturnMap('informationMap_3')">Volver</button>
+                </div>
+                <!--Informacion mostrada al seleccionar la pieza 4 del mapa-->
+                <div class="content lastColorWhite informationMap" id="informationMap_4">
+                    <h1>Territorio del Norte</h1>
+                    <p>
+                        Territorio del Norte (Northern Territory). Es una región australiana que se encuentra al norte
+                        en el centro del país, su capital es Darwin. Al oeste limita con Australia Occidental, al sur
+                        con Australia Meridional, y al este con Queensland. Es un territorio que al igual que otros
+                        formó parte de Nueva Gales del Sur durante parte del Siglo XIX. Luego formó parte de Australia
+                        Occidental y finalmente se independizó.
+                    </p>
+                    <div class="containerContets">
+                        <img src="images/mapa/northernTerrytory_1.jpg" alt="nueva_gales_del_sur_2" />
+                    </div>
+                    <p>
+                        El Territorio del Norte formó parte de Nueva Gales del Sur desde 1825 hasta 1863, pasando a
+                        formar parte de Australia Meridional hasta 1911. El 1 de enero de ese año, el Territorio del
+                        Norte fue separado de Australia Meridional y transferido al control de la Mancomunidad de
+                        Australia.
+                    </p>
+                    <p>
+                        También se construyó un ferrocarril entre Palmerston y Pine Creek entre 1883 y 1889. El ganado
+                        vacuno y la minería se desarrollaron durante ese período. Se encontró oro en Grove Hill en 1872
+                        y en Pine Creek, Brocks Creek, Burrundi, así como cobre en Daly River. Desde 1926 hasta 1931, el
+                        Territorio del Norte se dividió en dos provincias, Australia Septentrional y Australia Central,
+                        siendo el paralelo 20 la frontera y sus capitales Darwin y Alice Springs. Poco después, en el
+                        Kimberley Plan partes del Territorio del Norte se consideraron dentro del proyecto de
+                        constitución de un estado judío.
+                    </p>
+                    <div class="containerContets">
+                        <img src="images/mapa/northernTerrytory_2.jpg" alt="nueva_gales_del_sur_2" />
+                    </div>
+                    <p>
+                        Durante la Segunda Guerra Mundial, la mayor parte de la zona norte del territorio estuvo bajo
+                        mando militar, el único en la historia de Australia desde su independencia. Al acabar la
+                        contienda se devolvió la soberanía a la Mancomunidad.
+                    </p>
+
+                    <button class="buttonMap" onclick="onClickReturnMap('informationMap_4')">Volver</button>
+                </div>
+                <!--Informacion mostrada al seleccionar la pieza 5 del mapa-->
+                <div class="content lastColorWhite informationMap" id="informationMap_5">
+                    <h1>Australia Occidental</h1>
+                    <p>
+                        Australia Occidental (Western Australia, en inglés) es el mayor de los estados de Australia. Con
+                        una extensión total de 2.525.500 km² cubre el tercio occidental del país-continente. Es tan
+                        extenso, que si fuera un estado independiente sería el décimo país mas grande del mundo. Limita
+                        con Australia Meridional y el Territorio del Norte. En su capital Perth viven 1,5 millones de
+                        personas, las dos terceras partes del total del estado. Desde el punto de vista económico es un
+                        estado minero con algunas áreas vitivinícolas.
+                    </p>
+                    <!--Se uso un content para almacenar las imagenes debido a que este permite que se ajusten automaticamente-->
+                    <div class="containerContets">
+                        <!--Se uso un content especial para imagenes-->
+                        <div class="contentImg">
+                            <img src="images/mapa/WesternAustralia_1.jpg" alt="nueva_gales_del_sur_1" />
+                        </div>
+                        <!--Se uso un content especial para imagenes-->
+                        <div class="contentImg">
+                            <img src="images/mapa/WesternAustralia_2.jpg" alt="nueva_gales_del_sur_2" />
+                        </div>
+                    </div>
+                    <p>
+                        La capital del estado es la ciudad de Perth en la parte meridional de la costa oeste. Otras
+                        ciudades importantes son Bunbury, Kalgoorlie, Albany, Geraldton, Port Hedland y Broome, aunque
+                        todas ellas bastante menores que Perth.
+                    </p>
+                    <p>
+                        Los primeros habitantes de Australia Occidental, o Western Australia, fueron los aborígenes,
+                        quienes, para cuando el primer europeo llegó a sus costas, ya llevaban viviendo en la zona miles
+                        de años.
+                        El primer europeo que visitó Australia Occidental fue un explorador holandés, Dirk Hartog, en
+                        1616. Durante el resto del siglo XVII muchos otros viajeros holandeses llegaron a la costa oeste
+                        de Australia, muchos de ellos inintencionadamente. A finales del siglo XVII, marineros
+                        británicos y franceses ya habían comenzado a explorar la costa de Australia Occidental.
+                    </p>
+                    <button class="buttonMap" onclick="onClickReturnMap('informationMap_5')">Volver</button>
+                </div>
+                <!--Informacion mostrada al seleccionar la pieza 6 del mapa-->
+                <div class="content lastColorWhite informationMap" id="informationMap_6">
+                    <h1>Victoria</h1>
+                    <p>
+                        Victoria es uno de los seis estados que, junto con los dos territorios continentales y los seis
+                        insulares, conforman la Mancomunidad de Australia. Su capital y ciudad más poblada es Melbourne
+                        —situada al fondo de la bahía Port Phillip. Está ubicado al sureste del país, limitando al norte
+                        con el río Murray que lo separa de Nueva Gales del Sur, al sur con el estrecho de Bass que lo
+                        separa de Tasmania, y al oeste con Australia Meridional. Con 227 416 km² es el segundo estado
+                        menos extenso —por delante de Tasmania—, con 5 821 300 habs. en 2014, el segundo más poblado
+                        —por detrás de Nueva Gales del Sur— y con 24,5 hab/km², el más densamente poblado.
+                    </p>
+                    <!--Se uso un content para almacenar las imagenes debido a que este permite que se ajusten automaticamente-->
+                    <div class="containerContets">
+                        <!--Se uso un content especial para imagenes-->
+                        <div class="contentImg">
+                            <img src="images/mapa/victoria_1.jpg" alt="nueva_gales_del_sur_1" />
+                        </div>
+                        <!--Se uso un content especial para imagenes-->
+                        <div class="contentImg">
+                            <img src="images/mapa/victoria_2.jpg" alt="nueva_gales_del_sur_2" />
+                        </div>
+                        <!--Se uso un content especial para imagenes-->
+                        <div class="contentImg">
+                            <img src="images/mapa/victoria_3.jpg" alt="nueva_gales_del_sur_2" />
+                        </div>
+                    </div>
+                    <p>
+                        Después de que se fundara la colonia de Nueva Gales del Sur en 1788, el continente australiano
+                        fue dividido en dos partes, la oriental pasó a llamarse Nueva Gales del Sur y la occidental
+                        Nueva Holanda. Bajo la administración colonial de Sídney, se creó el primer asentamiento en
+                        Victoria, Portland. Melbourne se fundó en 1835.
+                    </p>
+                    <p>
+                        En 1851 se descubrió oro en Ballarat. Con el paso del tiempo se fueron realizando más
+                        descubrimientos a lo largo de toda Victoria. Las minas eran tan importantes, que la población y
+                        la economía crecieron desmesuradamente. Ese mismo año se concedió la independencia de Nueva
+                        Gales del Sur. En 1901 Victoria dejó de ser colonia y se convirtió en Estado de Australia.
+                        Melbourne fue la capital mientras se construía Canberra.
+                    </p>
+                    <button class="buttonMap" onclick="onClickReturnMap('informationMap_6')">Volver</button>
+                </div>
+                <!--Informacion mostrada al seleccionar el boton de informacion-->
+                <div class="content lastColorWhite informationMap" id="informationMap">
+                    <h1>Explicación de la propuesta</h1>
+                    <p>
+                        Para desarrollar este codigo se hizo uso de varios elementos:
+                        <ol>
+                            <li class="liInfoMap">El mapa:</li>
+                            Es un mapa sobre el cual el usuario puede interactuar.
+                            <!--Se uso un content especial para imagenes-->
+                            <div class="containerContets">
+                                <img src="images/mapa/Australia_interactive_map.jpg" alt="Australia_interactive_map" />
+                            </div>
+                            <li class="liInfoMap">Los estados:</li>
+                            Son botones en los que cuando el usuario coloca el mouse sobre ellos estos se muestran y
+                            emiten un sonido para que el usuario los pueda identificar facil mente ademas de que cambia
+                            el puntero todo con el fin de indicarle al usuario que se encuentra sobre un boton que puede
+                            seleccionar. Al usuario seleccionar la pagina se ocultará el mapa y se mostrará un documento
+                            html con la informacion correspondiente a ese estado.
+                            <!--Se uso un content especial para imagenes-->
+                            <div class="containerContets">
+                                <img src="images/mapa/Australia_interactive_map_selected.jpg"
+                                    alt="Australia_interactive_map_selected" />
+                            </div>
+                            <li class="liInfoMap">El documento de los estados:</li>
+                            Cuando el usuario accede al documento de lo estados esta accede a un documento donde se
+                            encuentra una descripcion del estado que ha seleccionado junto con imagenes de este lugar,
+                            ademas al final del documento hay un boton que le permite volver al mapa y seguir
+                            interactuando con él.
+                            <div class="containerContets">
+                                <img src="images/mapa/document_info.jpg" alt="document_info" />
+                            </div>
+                            <li class="liInfoMap">Boton de informacion:</li>
+                            Es un boton que sigue la misma logica de los estados y le permite al usuario dirigirse a
+                            este documento.
+                            <div class="containerContets">
+                                <img src="images/mapa/button_informacion_1.png" alt="button_informacion_1"
+                                    id="imgBotonInfoMap" />
+                            </div>
+                            <li class="liInfoMap">Sonidos</li>
+                            Los sonidos son ejecutador cuando el usuario selecciona un alguno de los estados, el boton
+                            de informacion o los botones para volver al mapa.
+                        </ol>
+                    </p>
+                    <button class="buttonMap" onclick="onClickReturnMap('informationMap')">Volver</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
