@@ -3,49 +3,49 @@
 const mapScale = 0.50;
 
 //Se crea el juego con la resolucion ajustada, ademas se asigna preload y create como las funciones que se han creado
-var game = new Phaser.Game(3000 * mapScale, 2000 * mapScale, Phaser.AUTO, 'map', { preload: preload, create: create });
+var game = new Phaser.Game(3000 * mapScale, 2000 * mapScale, Phaser.CANVAS, 'map', { preload: preload, create: create });
 
 //Se guardo en un arreglo todas las variables correspondientes a cada uno de los respectivos botones
 var pieces = [
     {
         xCor: 1719 * mapScale,
         yCor: 57 * mapScale,
-        url: '/images/mapa/Australia_interactive_map_pieza_1.png',
+        url: 'images/mapa/Australia_interactive_map_pieza_1.png',
         id: 'map_1',
         html: 'informationMap_1'
     },
     {
         xCor: 1840 * mapScale,
         yCor: 1079 * mapScale,
-        url: '/images/mapa/Australia_interactive_map_pieza_2.png',
+        url: 'images/mapa/Australia_interactive_map_pieza_2.png',
         id: 'map_2',
         html: 'informationMap_2'
     },
     {
         xCor: 1265 * mapScale,
         yCor: 937 * mapScale,
-        url: '/images/mapa/Australia_interactive_map_pieza_3.png',
+        url: 'images/mapa/Australia_interactive_map_pieza_3.png',
         id: 'map_3',
         html: 'informationMap_3'
     },
     {
         xCor: 1186 * mapScale,
         yCor: 26 * mapScale,
-        url: '/images/mapa/Australia_interactive_map_pieza_4.png',
+        url: 'images/mapa/Australia_interactive_map_pieza_4.png',
         id: 'map_4',
         html: 'informationMap_4'
     },
     {
         xCor: 221 * mapScale,
         yCor: 286 * mapScale,
-        url: '/images/mapa/Australia_interactive_map_pieza_5.png',
+        url: 'images/mapa/Australia_interactive_map_pieza_5.png',
         id: 'map_5',
         html: 'informationMap_5'
     },
     {
         xCor: 1799 * mapScale,
         yCor: 1374 * mapScale,
-        url: '/images/mapa/Australia_interactive_map_pieza_6.png',
+        url: 'images/mapa/Australia_interactive_map_pieza_6.png',
         id: 'map_6',
         html: 'informationMap_6'
     }
@@ -54,8 +54,8 @@ var pieces = [
 var button_informacion = {
     xCor: 1250,
     yCor: 50,
-    url_1: '/images/mapa/button_informacion_1.png',
-    url_2: '/images/mapa/button_informacion_2.png',
+    url_1: 'images/mapa/button_informacion_1.png',
+    url_2: 'images/mapa/button_informacion_2.png',
     id_1: 'info_1',
     id_2: 'info_2',
     html: 'informationMap'
@@ -67,12 +67,14 @@ var fx;
 function preload() {
     console.log("preload")
     //Se carga la imagen del mapa 
-    game.load.image('back_mapa', "/images/mapa/Australia_interactive_map.jpg")
+    game.load.image('back_mapa', "images/mapa/Australia_interactive_map.jpg")
     //Se carga el boton de la informacion
     game.load.image(button_informacion.id_1, button_informacion.url_1);
     game.load.image(button_informacion.id_2, button_informacion.url_2);
     //Se carga el audio
-    game.load.audio('sfx', '/sounds/sound.wav');
+    //window.location.href = game.canvas.toDataURL("sounds/sound.mp3")
+    console.log(game.canvas.toDataURL());
+    game.load.audio('sss',"sounds/sound.mp3");
     //Se recorre el arreglo que se guardo anteriormente
     pieces.map(
         //Se carga cada una de las piezas con su respectivo id y url
@@ -86,7 +88,7 @@ function preload() {
 function create() {
     console.log("create")
     //Configurando el audio
-    fx = game.add.audio('sfx');
+    fx = game.add.audio('sss');
     fx.allowMultiple = true;
     //Asignando un nombre al audio, un tiempo en el que inicia y el tiempo en el que termina
     fx.addMarker('over', 0, 0.5);
@@ -122,7 +124,6 @@ function create() {
     info.visible = true;
     info.onInputOver.add(overInformacion, this);
     info.onInputOut.add(outInformacion, this);
-    console.log(overInformacion)
 }
 
 //Funcion que se ejecuta cuando ocurre el over sobre los botones

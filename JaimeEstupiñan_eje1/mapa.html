@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html class="otherColor">
 
+<httpProtocol>
+    <customHeaders>
+        <add name="Access-Control-Allow-Origin" value="*" />
+        <add name="Access-Control-Allow-Headers" value="Content-Type" />
+        <add name="Access-Control-Allow-Methods" value="GET, POST, PUT, DELETE, OPTIONS" />
+    </customHeaders>
+</httpProtocol>
+
 <head>
     <title>Australia</title>
     <link href="styles/styles.css" rel="stylesheet" type="text/css">
@@ -10,7 +18,7 @@
     <!--Llamado al archivo de phaser: phaser.js-->
     <script src="javascript/phaser.js"></script>
     <!--Llamado al archivo del mapa: mapa.js-->
-    <script src="/javascript/mapa.js"></script>
+    <script src="javascript/mapa.js"></script>
 </head>
 
 <!-- Contenido de la pagina -->
@@ -329,7 +337,7 @@
                             </div>
                             <li class="liInfoMap">Sonidos</li>
                             Los sonidos son ejecutador cuando el usuario selecciona un alguno de los estados, el boton
-                            de informacion o los botones para volver al mapa.
+                            de informacion o los botones para volver al mapa (En caso de que no sirva el sonido abrir la pagina en edge).
                             <li class="liInfoMap">Se adapta y funciona en diferentes resoluciones (moviles)</li>
                             Toda la pagina incluyendo el mapa estan diseñados para funcionar en diferentes resoluciones
                             de dispositivos como por ejemplo celulares
